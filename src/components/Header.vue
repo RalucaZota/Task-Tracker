@@ -7,6 +7,7 @@ export default {
   },
   props:{
     title: String,
+    showAddTask: Boolean
   }
   
 };
@@ -14,7 +15,7 @@ export default {
 <template>
 <header>
 <h1>{{title}}</h1>
-<Button text="Add task" color="green"></Button>
+<Button @toggle-add-task="$emit('toggle-add-task')"  text="Add task" color="green"></Button>
 
 </header>
 </template>
